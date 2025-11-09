@@ -20,7 +20,7 @@
 	`mkdir -p ~/ros2_ws/src`
 	`cd ~/ros2_ws/src`
 2. Клонируйте в созданную папку репозиторий:
-	`git clone https://github.com/your_username/imu_processing_pkg.git`
+	`git clone https://github.com/Karfall-a/IMU_tools_test.git`
 3. Соберите пакет:
 	`colcon build`
 4. Не забудьте обновить среду:
