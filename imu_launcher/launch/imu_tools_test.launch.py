@@ -86,11 +86,12 @@ def generate_launch_description():
         name='complementary_filter_gain_node',
         output='screen',
         parameters=[
-            {'do_bias_estimation': True},
+            {'do_bias_estimation': False},
             {'do_adaptive_gain': True},
-            {'use_mag': False},
+            {'use_mag': True},
             {'gain_acc': 0.01},
             {'gain_mag': 0.01},
+            {'bias_alpha': 0.0},
         ],
         condition=IfCondition(PythonExpression(['"', LaunchConfiguration('filter'), '" == "complementary"']))
     )
