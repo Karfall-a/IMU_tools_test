@@ -1,0 +1,3 @@
+[submodule "imu_driver"]
+	path = imu_driver
+	url = https://github.com/Polytech-VM-Team/imu_driver
