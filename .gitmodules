@@ -1,3 +1,0 @@
-[submodule "imu_tools"]
-	path = imu_tools
-	url = https://github.com/CCNYRoboticsLab/imu_tools.git
