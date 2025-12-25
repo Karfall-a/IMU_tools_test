@@ -13,6 +13,7 @@
 
 - Ubuntu 20.04
 - ROS2 Galactic
+- sudo apt-get install ros-galactic-imu-tools
 
 ### Установка из репозитория
 
