@@ -92,7 +92,8 @@ def generate_launch_description():
             {'gain_acc': 0.01},
             {'gain_mag': 0.01},
         ],
-        condition=IfCondition(PythonExpression(['"', LaunchConfiguration('filter'), '" == "complementary"']))
+        condition=IfCondition(PythonExpression(['"', LaunchConfiguration('filter'), '" == "complementary"'])),
+        remappings=[('/imu/data', 'imu/data_complementary')]
     )
 
     #Starting madgwick filter node (if it has been chosen)
@@ -103,7 +104,8 @@ def generate_launch_description():
         name='imu_filter',
         output='screen',
         parameters=[os.path.join(config_dir, 'imu_filter.yaml')],
-        condition=IfCondition(PythonExpression(['"', LaunchConfiguration('filter'), '" == "madgwick"']))
+        condition=IfCondition(PythonExpression(['"', LaunchConfiguration('filter'), '" == "madgwick"'])),
+        remappings=[('/imu/data', 'imu/data_madgwick')]
     )
 
     return LaunchDescription([
